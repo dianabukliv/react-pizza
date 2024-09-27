@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Button from '../Button';
 
 function PizzaBlock(props) {
-  const {id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount } = props; 
+  const {id, title, imageUrl, price, types, sizes, onClickAddPizza, addedCount } = props; 
   const availableTypes = ['тоненькі', 'традиційні'];
   const availableSizes = [26, 30, 40];
 
@@ -42,7 +42,7 @@ function PizzaBlock(props) {
             src={imageUrl}
             alt="Pizza"
           />
-          <h4 className="pizza-block__title">{name}</h4>
+          <h4 className="pizza-block__title">{title}</h4>
           <div className="pizza-block__selector">
             <ul>
               {availableTypes.map((type, index) => (
@@ -109,7 +109,7 @@ PizzaBlock.propTypes = {
 };
 
 PizzaBlock.defaultProps = {
-  name: '---',
+  title: '---',
   price: 0,
   types: [],
   sizes: [],

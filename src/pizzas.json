@@ -1,0 +1,148 @@
+[
+  {
+    "id": "0",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/WMFqAHnL0kt5WGOg9SyDVn0hLO125yvO8zZcMa0q.jpg",
+    "title": "Пепероні Фреш з перцем",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 803,
+    "category": 3,
+    "rating": 4
+  },
+  {
+    "id": "1",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/uK3wEm8x0UrlOZBK25J5BJGUEJqaYWNfewtCqllj.jpg",
+    "title": "Сирна",
+    "types": [0],
+    "sizes": [26, 40],
+    "price": 245,
+    "category": 1,
+    "rating": 6
+  },
+  {
+    "id": "2",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/8kt56gt60SyZm5w0bNvj2TpQNORyNU7m2ZyFbS0M.jpg",
+    "title": "Барбекю",
+    "types": [0],
+    "sizes": [26, 40],
+    "price": 295,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": "3",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/KKll7vQWU42YVZzH3FEHYtW6OMzW5GCre22XjbC0.jpg",
+    "title": "Кисло-солодкий",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 275,
+    "category": 2,
+    "rating": 2
+  },
+  {
+    "id": "4",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/qukmKBTF0hk7jmqGJe5FFDFxR1QGnXJWfw6phWRu.jpg",
+    "title": "Чізбургер-піца",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 415,
+    "category": 3,
+    "rating": 8
+  },
+  {
+    "id": "5",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/gklP2fBbyCAf5o567yvVUmkWiRdJT2NX6bX5yOGn.jpg",
+    "title": "Крейзі пепероні",
+    "types": [
+      0
+    ],
+    "sizes": [
+      30,
+      40
+    ],
+    "price": 580,
+    "category": 2,
+    "rating": 2
+  },
+  {
+    "id": "6",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/0nNu0FmbJZnDGjh8Yfab11ucZhFqKUzQ39g3m3ss.jpg",
+    "title": "Пепероні",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 675,
+    "category": 1,
+    "rating": 9
+  },
+  {
+    "id": "7",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/aruNm56ARvYumVT7KPvOVzlfRWvJYqLH31Fe5QJv.jpg",
+    "title": "Маргарита",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 450,
+    "category": 4,
+    "rating": 10
+  },
+  {
+    "id": "8",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/0OljcLU05sOFyhbYLIhpXjbRP8NztqUugCPXQrB0.jpg",
+    "title": "Чотири сезони",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 395,
+    "category": 5,
+    "rating": 10
+  },
+  {
+    "id": "9",
+    "imageUrl": "https://gudwork.com.ua/storage/uploads/menu_images/aEnKEzoXwSiD2xNyysY8MfAYcOzg42rZGJq0M142.jpg",
+    "title": "Овочі та гриби 🌱",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 285,
+    "category": 5,
+    "rating": 7
+  }
+]

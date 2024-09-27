@@ -10,8 +10,8 @@ const categoryNames = ["М'ясні", 'Вегетаріанські', 'Грил�
 const sortItems = [
   { name: 'популярність', type: 'popular' },
   { name: 'ціна', type: 'price' },
-  { name: 'алфавіт', type: 'alphabet' },
 ];
+
 
 function Home() {
   const dispatch = useDispatch();
@@ -22,21 +22,37 @@ function Home() {
 
   React.useEffect(() => {
     dispatch(setLoaded(false));
-    axios.get(`http://localhost:3001/pizzas?${category !== null ? `category=${category}` : ''}`)
-      .then(({ data }) => {
-        const sortedData = [...data].sort((a, b) => {
-          if (sortBy === 'popular') {
-            return b.popularity - a.popularity; 
-          } else if (sortBy === 'price') {
-            return a.price - b.price;
-          } else if (sortBy === 'alphabet') {
-            return a.name.localeCompare(b.name);
-          }
-          return 0;
-        });
+  
+    fetch('src/pizzas.json')
+      .then((response) => response.json())
+      .then((data) => {
+        // Фільтрація за категоріями
+        const filteredData = category !== null 
+          ? data.filter(pizza => pizza.category === category)
+          : data; // Якщо category === null, повертаються всі піци
+  
+          const sortedData = [...filteredData].sort((a, b) => {
+            if (sortBy === 'popular') {
+              return b.popularity - a.popularity;
+            } else if (sortBy === 'price') {
+              return a.price - b.price;
+            } else if (sortBy === 'alphabet') {
+              // Якщо поле name відсутнє, використовуємо пустий рядок для сортування
+              return (a.name || '').localeCompare(b.name || '');
+            }
+            return 0;
+          });
+          
+          
+  
         dispatch(setPizzas(sortedData));
+      })
+      .catch((error) => {
+        console.error('Error fetching pizzas:', error);
       });
   }, [category, sortBy]);
+  
+  
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
@@ -44,7 +60,8 @@ function Home() {
 
   const onSelectSortType = React.useCallback((type) => {
     dispatch(setSortBy(type));
-  }, []);
+  }, [dispatch]);
+  
 
   const handleAddPizzaToCart = (obj) => {
     dispatch({
@@ -61,7 +78,8 @@ function Home() {
           onClickCategory={onSelectCategory}
           items={categoryNames}
         />
-        <SortPopup activeSortType ={sortBy} items={sortItems} onClickSortType={onSelectSortType} />
+ <SortPopup activeSortType={sortBy} items={sortItems} onClickSortType={onSelectSortType} />
+
       </div>
       <h2 className="content__title">Всі піци</h2>
       <div className="content__items">
