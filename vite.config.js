@@ -1,8 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import sass from 'vite-plugin-sass';
+import { defineConfig } from 'vite';
+import json from '@rollup/plugin-json'; // Імпортуй плагін для JSON
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), sass()], 
-})
+  plugins: [json()], // Додаємо плагін у масив plugins
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "src/styles/variables.scss";`, // Впевнись, що змінні доступні глобально
+      },
+    },
+  },
+});
